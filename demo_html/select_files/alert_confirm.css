@@ -1,0 +1,153 @@
+@charset "UTF-8";
+/* 
+/* 
+---------------------------------
+Site:"用户中心"
+Author:Yichen Wang
+Updated:20150430
+Updated by:Yichen Wang
+--------------------------------- 
+/*弹出框 start*/
+.popup {
+	z-index: 99;
+	overflow: hidden;
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background-color: #333;
+	filter: Alpha(Opacity =       70);
+	opacity: 0.7;
+}
+
+.boxShadow {
+	
+}
+/*IE6 S 解决IE下遮罩问题*/
+* html {
+	background: url(*) fixed;
+}
+
+* html body {
+	margin: 0;
+	height: 100%;
+}
+
+* html .popup {
+	position: absolute;
+	left: expression(documentElement.scrollLeft + documentElement.clientWidth -       this.offsetWidth);
+	top: expression(documentElement.scrollTop + documentElement.clientHeight -       this.offsetHeight);
+}
+/*IE6 E 解决IE下遮罩问题*/
+.popupContent {
+	position: absolute;
+	background: #fff;
+	z-index: 101;
+	overflow: auto;
+}
+
+.size {
+	left: 50%;
+	width: 500px;
+	height: 200px;
+	margin-left: -250px;
+}
+
+.size120 {
+	left: 50%;
+	width: 500px;
+	height: 140px;
+	margin-left: -250px;
+}
+
+.popupTitle {
+	width: 97%;
+	height: 40px;
+	line-height: 40px;
+	font-size: 16px;
+	font-family: "微软雅黑";
+	background: #2d7bd3;
+	color: #fff;
+	padding-left: 3%;
+}
+
+a.close {
+	display: block;
+	overflow: hidden;
+	width: 40px;
+	height: 40px;
+	background: url(../../../img/close.png) no-repeat;
+	cursor: pointer;
+}
+
+a.close:hover {
+	background: url(../../../img/closeHover.png) no-repeat;
+}
+
+.wrong,.right {
+	display: block;
+	width: 90%;
+	margin: 20px auto;
+	text-align: center;
+	font-size: 16px;
+	font-family: "微软雅黑";
+}
+
+a.txtinfoBtn {
+	display: inline-block;
+	font-size: 14px;
+	background: #32a1e6;
+	padding: 8px 40px;
+	color: #fff;
+	margin-left: 195px;
+}
+
+a.txtinfoBtn:hover {
+	background: #1d394b;
+	text-decoration: none;
+	color: #fff;
+}
+
+a.txtcancleBtn {
+	display: inline-block;
+	font-size: 14px;
+	background: gray;
+	padding: 8px 40px;
+	color: #fff;
+	margin-left: 195px;
+}
+
+a.txtcancleBtn:hover {
+	background: #1d394b;
+	text-decoration: none;
+	color: #fff;
+}
+/*弹出框 end*/
+.success {
+	width: 58px;
+	height: 53px;
+	background: url('../../../img/messageright.png');
+	border: 0px none;
+	cursor: default;
+}
+
+.error {
+	width: 58px;
+	height: 53px;
+	background: url('../../../img/messagewrong.png');
+	border: 0px none;
+	cursor: default;
+}
+
+.alert {
+	display: none;
+}
+
+.confirm {
+	display: none;
+}
+.right span{
+	position: relative;
+	top:18px;
+}

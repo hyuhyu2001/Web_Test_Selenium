@@ -1,0 +1,154 @@
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <script type="text/javascript">
+        function createOrder() {
+            books = document.forms[0].book
+            txt = ""
+            for (i = 0; i < books.length; ++i) {
+                if (books[i].checked) {
+                    txt = txt + books[i].value + " "
+                }
+            }
+            document.getElementById("order").value = "您订购的书籍有： " + txt
+        }
+    </script>
+</head>
+<body ryt12822="1">
+<h3>Selenium2/Webdriver元素定位学习专用页面</h3>
+
+<table id="测试" align="center" valign="top" width="100%" border="1.5">
+    <tbody>
+    <tr width="100%">
+        <td align="left" valign="top" width="25%">
+            <p>你想要什么书呢？</p>
+
+            <form>
+                <input type="checkbox" name="book" value="Python简明教程">Python简明教程<br/>
+                <input type="checkbox" name="book" value="Python核心教程">Python核心教程<br/>
+                <input type="checkbox" name="book" value="Selenium2 测试框架">Selenium2 测试框架<br/>
+                <input type="checkbox" name="book" value="Web Driver API学习">Web Driver API学习<br/>
+                <br/>
+                <input type="button" id="submitOrder" onclick="createOrder()" value="发送订单">
+                <br/><br/>
+                <textarea id="order" size="250" rows="5" cols="40"></textarea>
+            </form>
+            <div class="span10 well">
+                <h3>====iframe内嵌百度首页====</h3>
+                <iframe id="bdframe" name="nbdframe" src="http://www.baidu.com" width="300"
+                        height="300" scrolling="auto">
+                </iframe>
+            </div>
+        </td>
+        <td align="left" valign="top" width="25%">
+            <div>
+                <p>演示弹出框</p>
+                <input type="button" id="alertbutton" value="点我弹出警告框" onclick="alert('I am an alert box!')"
+                       style="background: #fd0000;">
+            </div>
+            <section class=" sub_mod">
+                <h4 class="sub_title">IDE/编辑器</h4>
+                <ul>
+                    <li>
+                        <a href="http://www.sublimetext.com/" target="_blank">sublimetext</a>
+                    </li>
+                    <li>
+                        <a href="https://atom.io/" target="_blank">atom</a>
+                    </li>
+                    <li>
+                        <a href="https://notepad-plus-plus.org/" target="_blank">notepad++</a>
+                    </li>
+                    <li><a href="http://www.vim.org/" target="_blank">vim</a></li>
+
+                    <li><a href="http://www.eclipse.org/" target="_blank">eclipse</a></li>
+                    <li><a href="https://www.editplus.com/" target="_blank">editplus</a></li>
+                    <li><a href="https://developer.apple.com/xcode/" target="_blank">xcode</a></li>
+                </ul>
+            </section>
+
+
+            <section class="sub_mod">
+                <h4 class="sub_title">演示下拉框</h4>
+                <select id="selectdemo">
+                    <option value="volvo">Volvo</option>
+                    <option value="saab">Saab</option>
+                    <option value="bmw" selected="selected">BMW</option>
+                    <option value="audi">Audi</option>
+                </select>
+            </section>
+
+        </td>
+        <td align="left" valign="top">
+            <section class="sub_mod">
+                <h4 class="sub_title">检测/测试/查询</h4>
+                <ul>
+                    <li>
+                        <a href="http://caniuse.com/" target="_blank">caniuse</a>
+                    </li>
+                    <li>
+                        <a href="http://www.my-debugbar.com/wiki/IETester/HomePage/" target="_blank">IETester</a>
+                    </li>
+                    <li>
+                        <a href="http://dev.modern.ie/tools/vms/" target="_blank">IE官方测试大礼包</a>
+                    </li>
+                    <li>
+                        <a href="http://jigsaw.w3.org/css-validator/#validate_by_upload" target="_blank">w3c css验证</a>
+                    </li>
+                    <li>
+                        <a href="http://validator.w3.org/" target="_blank">w3c html验证</a>
+                    </li>
+                    <li>
+                        <a href="http://www.jslint.com/" target="_blank">jslint</a>
+                    </li>
+                    <li>
+                        <a href="https://gsnedders.html5.org/outliner/" target="_blank">html5 outliner</a>
+                    </li>
+                    <li>
+                        <a href="http://validator.w3.org/mobile-alpha/" target="_blank">移动端代码检测</a>
+                    </li>
+                    <li>
+                        <a href="http://www.typetester.org/" target="_blank">Typetester</a>
+                    </li>
+                    <li>
+                        <a href="http://nth-test.com/" target="_blank">nth-test</a>
+                    </li>
+                    <li>
+                        <a href="http://screensiz.es/phone" target="_blank">screensiz</a>
+                    </li>
+                    <li>
+                        <a href="http://browserhacks.com/" target="_blank">浏览器hack</a>
+                    </li>
+
+                </ul>
+            </section>
+        </td>
+        <td align="left" valign="top" width="25%">
+            <h3>模拟登录页</h3>
+
+            <form action="" method="post">
+                <p>输入用户名<br>
+                    <input type="text" id="username" class="usrclass" name="yonghuming">
+                </p>
+
+                <p>输入密码<br>
+                    <input type="password" id="securepwd" class="pwdclass" name="mima">
+                </p>
+
+                <p>
+                    <img src="https://passport.baidu.com/cgi-bin/genimage?jxIcaptchaservice646365666a4f464f7276785454756974334d324778486f39736e47424c4b345a4e51594a563577776b6150763139434351475133667066354d70567a546c683677386c6e33724b416f636b54353167703641746e41697572354c6b4d5036704c725a567035684c78324c42424a6d4f766c504e4361464d737a53547553446e30613379792f593378413777355161457276346e357343506a6a55635a394d2f475a615a4865444c6f4a75664f37324946486154494d4f3071754542684e796d72656266476d3742444f6378386867577044557a436257576b5a786f477a4431684835485a3775736b63714552614c354e6c2f73573564637371727449463967356c76617532726a626f62784a59786651307439746e7654455131764869417367356d61724344324c784c67554b51">
+                </p>
+
+                <p>
+                    <input type="submit" value="提交" class="zh_a_1" name="">
+                </p>
+            </form>
+        </td>
+
+    </tr>
+    </tbody>
+</table>
+<div>
+    https://shop60459643.taobao.com/
+</div>
+</body>
+</html>

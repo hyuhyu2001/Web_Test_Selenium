@@ -1,0 +1,5 @@
+uname=maizi,pwd=abc123456;
+uname=maizi_test@139.com,pwd=abc123456;
+uname=maizidas,pwd=abc123456;
+uname= ,pwd=123;
+uname=maizi_test@139.com,pwd= ;

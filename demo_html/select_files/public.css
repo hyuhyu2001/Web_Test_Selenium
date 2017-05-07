@@ -1,0 +1,162 @@
+/* ------------------------------------全局定义---------------------------------------- */
+* html body{ overflow:visible;}
+* html iframe, * html frame{ overflow:auto;}
+* html frameset{ overflow:hidden;}
+body{ color:#333;background:#f2f6ff; font:12px/22px Verdana,Arial,sans-serif,"Times New Roman",宋体; text-align:left;}
+body,ul,ol,li,p,h1,h2,h3,h4,h5,h6,form,fieldset,table,td,img,div,tr{ margin:0; padding:0;}
+input,select,textarea{font-size:12px; vertical-align:middle;}
+body div{text-align:left;}
+textarea,input{ word-wrap:break-word; word-break:break-all; padding:0px;}
+li{list-style-type: none;}
+img{ border:0 none;}
+a:link{ color:#666; text-decoration:none;}
+a:hover{ color:#F60; text-decoration:underline;}
+/* 去掉链接的虚线框 */
+a{outline:none;star:expression(this.onFocus=this.blur()); text-decoration:none;}
+/* 定义H系列标签，覆盖H系列标签默认属性 */
+h1{ font-size:24px; }
+h2{ font-size:20px;}
+h3{ font-size:18px;}
+h4{ font-size:16px;}
+h5{ font-size:14px;}
+h6{ font-size:12px;}
+/* ------------------------------------通用属性定义---------------------------------------- */
+/* 鼠标样式 */
+.pointer{ cursor:pointer;}
+/* 取消边框 */
+.noBorder{ border:0 none;}
+/*取消背景色*、
+.nobg{background:none !important;}
+/* 文本对齐方式 */
+.t_l{text-align:left;}
+.t_c{text-align:center;}
+.t_r{text-align:right;}
+/* 定义文本下划线 */
+.unLine{ text-decoration:underline;}
+.disunLine{ text-decoration:none;}
+/* 定位关系 */
+.absolute{ position:absolute;}
+.relative{ position:relative;}
+/* 字母和单词换行设置，强制内容换行，强制内容不换行 */
+.break{ word-break:break-all; word-wrap:break-word;}
+.nobreak{ word-break:keep-all; word-wrap:normal;}
+/* 浮动定义 */
+.fl{ float:left;}
+.fr{ float:right;}
+.o-hidden{ overflow:hidden;}
+.invisible{ visibility:hidden;}
+.hidden{ display:none;}
+.block{ display:block;}
+/* ------------------------------------清理元素--------------------------------------- */
+/* 清理浮动元素,当浮动换行时后面元素不希望浮动，添加此属性，防止IE BUG */
+.clear{ clear:both; height:0px; width:100%; font-size:1px; line-height:0px; visibility:hidden; overflow:hidden;}
+/*===div内清除浮动 start===*/
+.cf:before, .cf:after {content: " "; /* 1 */ display: table; /* 2 */ }
+.cf:after { clear: both; }
+/** For IE 6/7 only Include this rule to trigger hasLayout and contain floats. */
+.cf{*zoom: 1; }
+/* 圆角5px */
+.radius5px{border-radius:5px;-webkit-border-radius:5px;-moz-border-radius:5px;-o-border-radius:5px;}
+.radius3px{background:#fff;border-radius:3px;-webkit-border-radius:3px;-moz-border-radius:3px;-o-border-radius:3px;}
+.radius5px_top{border-radius:5px 5px 0 0;-webkit-border-radius:5px 5px 0 0;-moz-border-radius:5px 5px 0 0;-o-border-radius:5px 5px 0 0;}
+.radius8px_right{border-radius:0 8px 8px 0;-webkit-border-radius:0 8px 8px 0;-moz-border-radius:0 8px 8px 0;-o-border-radius:0 8px 8px 0;}
+.radius8px{border-radius:8px;-webkit-border-radius:8px;-moz-border-radius:8px;-o-border-radius:8px;}
+.transition{transition: all 0.5s;-moz-transition: all 0.5s;-o-transition: all 0.5s;-webkit-transition: all 0.5s;}
+.wrapper{margin:0 auto;width:1024px;overflow:hidden;}
+.border1px{border:1px solid #ced7ea}
+.margin_tb_15px{margin:15px auto;}
+/*超出省略……*/
+.ellipsis{overflow:hidden; white-space:nowrap;text-overflow:ellipsis;}
+
+/*===翻页===*/
+/*.page{margin:20px auto;color:#999;text-align:center;}
+.page input{margin:0 5px;color:#999;width:25px;height:25px;line-height:25px;text-align:center;}
+.page a{display:inline-block;padding:2px 8px;*zoom:1;color:#999;border:1px solid #999;}
+.page a:hover, .paging a:active{border:1px solid #2473CA;color:#2473CA;text-decoration:none;}
+.prev a,.next a{width:65px;}
+.current a{background:#1fa4ff;color:#fff;}
+.page a.current a:hover{background:#2473CA;}**/
+/*=====self自己修改的样式 s=====*/
+.page{margin:20px auto;/*color:#999;*/text-align:center;}
+.page input{margin:0 5px;/*color:#999;*/width:25px;height:25px;line-height:25px;text-align:center;}
+.page a{display:inline-block;padding:2px 8px;*zoom:1;/*color:#999;*/border:1px solid #999;margin-left:1px;margin-right:1px;}
+.page a:hover, .paging a:active{border:1px solid #2473CA;color:#2473CA;text-decoration:none;}
+.prev a,.next a{width:65px;}
+.current a{background:#1fa4ff;color:#fff;}
+.page a.current a:hover{background:#2473CA;}
+/*=====self e=====*/
+
+.main{width:1024px;margin:0 auto;}
+/*===右侧main_r S===*/
+.main_r{width:826px;min-height:683px;border-top:1px solid #ced7ea;border-right:1px solid #ced7ea;border-bottom:1px solid #ced7ea;background:#fff;}
+/*===右侧main_r E===*/
+.mr20{margin-right:20px;}
+
+.main_r_wrapper{width:772px;margin:0 auto;}
+/*标题*/
+.h2Title{height:45px;line-height:45px;font-size:20px;font-family:"微软雅黑";border-bottom:2px solid #2d7bd3;font-weight:normal;margin-bottom:10px;}
+.h2Title i{border:2px solid #2d7bd3;width:0;height:12px;margin-right:10px;}
+
+input{width:150px;height:30px;line-height:30px;border:1px solid #ccc;border-radius: 2px;color: #666;padding-left:5px;margin:0 5px;}
+input:hover, input:focus, textarea:hover, textarea:focus{border-color:#2d7bd3;outline:none;}
+.noEditable{background:#f7f7f7;cursor:auto;color:#999;}
+.noEditable:hover{border:1px solid #ccc;}
+.radio,.radioed{display:inline-block;margin:0 10px;width:16px; height:16px;line-height:16px;background:url(../img/radio.png) 0 0px no-repeat;}/*20150508 alice 新增单选样式*/
+.radioed{background-position:right 0;}
+/*--表单下拉--*/
+.inputArrow{color:#cccdcf;position:relative;top:1px;right:25px;cursor:pointer;}
+.selectInput{width:165px;color:#999;cursor:pointer;z-index:1;}/*20150925 调整*/
+.selectBox{display:inline-block;*display:inline;position:relative;}/*20150909更改*/
+.selectDropDown{position:absolute;top:32px;left:1px;border:1px solid #eee;margin:0 4px;background:#fff;z-index:2;}
+.selectDropDown a{display:block;width:150px;height:30px;line-height:30px;color:#333;text-decoration:none;padding-left:5px;cursor:pointer;}
+.selectDropDown a:hover{background:#e7eaef;color:#333;text-decoration:none;}
+.redStar{color:#ff0000;padding-right:2px;}/*--必填--*/
+.selectDropDownOverflow{height:120px;overflow-y:auto;overflow-x:hidden;}/*20150520新增*/
+/*--z-ibdex--*/
+.z_index10{z-index:10;}
+.z_index9{z-index:9;}
+.z_index8{z-index:8;}
+.z_index7{z-index:7;}
+.z_index6{z-index:6;}
+.z_index5{z-index:5;}
+.z_index4{z-index:4;}
+
+/*弹出框 start*/
+/*IE6 S 解决IE下遮罩问题*/ 
+*html { background: url(*) fixed; } 
+*html body { margin: 0; height: 100%; } 
+*html .popup { position: absolute; left: expression(documentElement.scrollLeft + documentElement.clientWidth - this.offsetWidth); top: expression(documentElement.scrollTop + documentElement.clientHeight - this.offsetHeight); } 
+/*IE6 E 解决IE下遮罩问题*/ 
+/*弹出框 end*/
+
+/*=====微信弹出框开始=====*/
+.top {height: 30px;line-height: 30px;font-size: 16px;text-align: center;width: 100%;}
+.box {width: auto;}
+.big_box {border: solid 1px #999;width: 206px;border-radius: 5px;background: #eee;position: absolute;display: none;z-index: 3}
+.wx_title {border-bottom: solid 1px #ccc;line-height: 30px;font-size: 16px;font-family: 微软雅黑;text-indent: 1em;}
+.wx_ewm {text-align: center;padding: 10px;border-bottom: solid 1px #ccc;}
+.wx_bottom {padding: 5px 10px;line-height: 20px;}
+/*=====微信弹出框开始=====*/
+/*=====self=====*/
+.disable a{color:#999};
+
+
+/*弹出框 start*/
+.popup {z-index:99;overflow: hidden;position:fixed;left:0;top:0; width:100%;height:100%;background-color: #333;filter: Alpha(Opacity=70);opacity: 0.7;}
+.noticeboxShadow{} 
+.noticepopupContent{position: absolute; background: #fff;z-index: 101; overflow: auto;}
+.noticesize{top: 50%;left: 50%;width: 460px; height: 190px; margin-left:-250px; margin-top:-105px;}
+.noticepopupTitle{ width:97.1%; height:40px; line-height:40px; font-size:16px; font-family:"微软雅黑"; background:#2d7bd3; color:#fff; padding-left:3%;}
+a.noticeclose{ display:block; overflow:hidden; width:40px; height:40px; background:url(../img/close.png) no-repeat; }
+a.noticeclose:hover{ background:url(../img/closeHover.png) no-repeat;}
+.noticepopupSt{ margin:20px auto 0 auto; width:90%;}
+.noticepopupTxt span{margin:15px;}
+.noticerightTxt_tit{ padding-left:50px;width:220px;margin:auto;height:50px;line-height:50px;font-size:24px;font-family:"微软雅黑"; color:#666;background: url(../img/notice1.png) center left no-repeat}
+.noticerightTxt{height:40px;line-height:40px;font-size:18px;font-family:"微软雅黑"; color:#666;}
+.noticerightTel{ color:#F00; font-size:16px;}
+.mt20{ margin-top:20px;}
+.noticeoperate a{display:inline-block;padding:5px 40px;margin:15px 20px;background:#32a1e6;color:#fff; text-decoration:none;}
+.noticeoperate a:hover{background:#1d394b;}
+.noticeoperate a.noticecancel{background:#999;}
+.noticeoperate a.noticecancel:hover{background:#666;}
+/*弹出框 end*/

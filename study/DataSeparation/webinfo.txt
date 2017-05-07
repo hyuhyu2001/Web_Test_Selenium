@@ -1,0 +1,7 @@
+url=http://www.maiziedu.com/
+text_id=µÇÂ¼
+userid=id_account_l
+pwdid=id_password_l
+loginid=login_btn
+errorid=login-form-tips
+logout=ÍË³ö 

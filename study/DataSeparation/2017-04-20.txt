@@ -1,0 +1,5 @@
+uname(maizi) pwd(abc123456):error:该账号格式不正确
+uname(maizi_test@139.com) pwd(abc123456):pass
+uname(maizidas) pwd(abc123456):error:该账号格式不正确
+uname() pwd(123):error:账号不能为空
+uname(maizi_test@139.com) pwd():error:密码不能为空
