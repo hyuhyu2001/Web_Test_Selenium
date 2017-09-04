@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 
 """
-@author:jinzj
+@author:
 @contact:
 @others:
 @desc:
